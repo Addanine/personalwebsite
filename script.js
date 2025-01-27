@@ -2,6 +2,17 @@ const output = document.getElementById('output');
 const input = document.getElementById('input');
 const body = document.body;
 
+window.onload = () => {
+  input.focus();
+};
+
+// Prevent the user from leaving the input box
+input.addEventListener('blur', () => {
+  setTimeout(() => input.focus(), 0);
+});
+
+
+
 let vimMode = false;
 let vimContent = '';
 let currentFile = '';
@@ -15,11 +26,10 @@ const fileSystem = {
       'about.txt': 'hey! im harry (aka adenine), a 14 yr old developer from san francisco. i previously went to live oak school and now im at lick-wilmerding high school!',
       'contact.txt': 'email: harry.oltmans@icloud.com\nphone: 4154654736',
       'projects/': { type: 'directory', contents: {} },
-      'interests': { type: 'directory', contents: {} },
+      'interests/': { type: 'directory', contents: {} },
       'skills/': { type: 'directory', contents: {} },
       'favorites/': { type: 'directory', contents: {} },
       'misc/': { type: 'directory', contents: {} },
-      'games/': { type: 'directory', contents: {} }
     }
   },
   skills: {
@@ -74,17 +84,13 @@ const secretCommands = {
   'neovim': "check out my config! https://github.com/Addanine/nvim.git",
   'nvim': "check out my config! https://github.com/Addanine/nvim.git",
   'aws': "i'm aws certified! cloud practitioner, sysops administrator, solutions engineer, and developer",
-  'blood': "did you know? adult humans have around 5-6 liters of blood! fascinated by hematology? try 'cat hematology.txt' in the interests directory",
-  'hormones': "the endocrine system is like a complex chemical messaging network! check out 'cat endocrinology.txt' in the interests directory",
-  'laufey': "promise and i wish you love are such good songs, dm me if you ever wanna talk about music",
-  'clairo': "its peak",
-  'mitski': "good songs for whenever i feel like shit",
-  'beabadoobee': "the perfect pair, beaches, and glue song are incredible",
+  'blood': "did you know? adult humans have around 5-6 liters of blood! try 'cat hematology.txt' in the interests directory",
+  'hormones': "check out 'cat endocrinology.txt' in the interests directory",
   't3': "type-safety all the way down! check out 'cat stack.txt' in the misc directory",
   'ping': "pong!",
-  'cookie': "🍪 here's a cookie for being curious!",
   'secret': "try these commands: neovim, aws, blood, hormones, t3, laufey, clairo, mitski, beabadoobee, bi.",
   'sudo': 'nice try :)',
+  'rm': 'come on',
   'rm -rf': '🚨 NOPE! 🚨',
   'draw': asciiArtMode,
   'snake': startSnakeGame,
@@ -190,17 +196,6 @@ const showPhoto = () => {
 
 function showNeofetch() {
   const neofetchArt = `
-      ___           ___           ___           ___     
-     /\\__\\         /\\  \\         /\\  \\         /\\  \\    
-    /::|  |       /::\\  \\       /::\\  \\       /::\\  \\   
-   /:|:|  |      /:/\\:\\  \\     /:/\\:\\  \\     /:/\\:\\  \\  
-  /:/|:|  |__   /:/  \\:\\  \\   /::\\~\\:\\  \\   /::\\~\\:\\  \\ 
- /:/ |:| /\\__\\ /:/__/ \\:\\__\\ /:/\\:\\ \\:\\__\\ /:/\\:\\ \\:\\__\\
- \\/__|:|/:/  / \\:\\  \\  \\/__/ \\/__\\:\\/:/  / \\/_|::\\/:/  /
-     |:/:/  /   \\:\\  \\            \\::/  /     |:|::/  / 
-     |::/  /     \\:\\  \\           /:/  /      |:|\\/__/  
-     /:/  /       \\:\\__\\         /:/  /       |:|  |    
-     \\/__/         \\/__/         \\/__/         \\|__|    
   `;
 
   const systemInfo = `
