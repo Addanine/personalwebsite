@@ -340,7 +340,6 @@ available commands:
 - theme: change color scheme
 - photos: view photo collage
 - help: show this help
-- secret: show secret commands (not very secret anymore)
 
 folders to explore:
 - skills: check out my programming knowledge
@@ -352,7 +351,9 @@ folders to explore:
 try commands like:
 sudo, rm -rf, vim, :wq, exit
 
-wanna see how i made this? (it isnt very organized) check out the source code on github at https://github.com/Addanine/personalwebsite.git!
+wanna see how i made this? (it isnt very organized) 
+check out the source code on github at 
+https://github.com/Addanine/personalwebsite.git!
   `;
   output.innerHTML += `<pre>${helpText}</pre>`;
 }
