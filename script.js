@@ -78,7 +78,7 @@ const secretCommands = {
   'hormones': "the endocrine system is like a complex chemical messaging network! check out 'cat endocrinology.txt' in the interests directory",
   'laufey': "promise and i wish you love are such good songs, dm me if you ever wanna talk about music",
   'clairo': "its peak",
-  'mitski': "",
+  'mitski': "good songs for whenever i feel like shit",
   'beabadoobee': "the perfect pair, beaches, and glue song are incredible",
   't3': "type-safety all the way down! check out 'cat stack.txt' in the misc directory",
   'ping': "pong!",
@@ -86,7 +86,6 @@ const secretCommands = {
   'secret': "try these commands: neovim, aws, blood, hormones, t3, laufey, clairo, mitski, beabadoobee, bi.",
   'sudo': 'nice try :)',
   'rm -rf': '🚨 NOPE! 🚨',
-  'vim': 'nvim is better',
   'draw': asciiArtMode,
   'snake': startSnakeGame,
   'matrix': startMatrixEffect,
@@ -217,7 +216,6 @@ Disk: 1TB SSD
 
   output.innerHTML += `
     <div style="white-space: pre-line;">
-      ${neofetchArt}
       ${systemInfo}
     </div>
   `;
@@ -341,11 +339,8 @@ available commands:
 - nvim: edit files
 - theme: change color scheme
 - photos: view photo collage
-- draw: ascii art mode
-- snake: play snake game
-- tree: show directory structure
 - help: show this help
-- secret...
+- secret: show secret commands (not very secret anymore)
 
 folders to explore:
 - skills: check out my programming knowledge
@@ -355,7 +350,9 @@ folders to explore:
 - misc: other cool stuff about me
 
 try commands like:
-sudo, rm -rf, vim, :wq
+sudo, rm -rf, vim, :wq, exit
+
+wanna see how i made this? (it isnt very organized) check out the source code on github at https://github.com/Addanine/personalwebsite.git!
   `;
   output.innerHTML += `<pre>${helpText}</pre>`;
 }
