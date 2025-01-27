@@ -109,7 +109,7 @@ input.style.bottom = '0';
 
 function updatePrompt() {
   const prompt = document.querySelector('.prompt');
-  prompt.textContent = `~/${currentDirectory} $`;
+  prompt.textContent = `~/${currentDirectory}`;
 }
 
 function listContents() {
@@ -471,5 +471,5 @@ input.addEventListener('keydown', (e) => {
   }
 });
 
-output.innerHTML = `<div>hi! im harry (aka adenine). run "help" to start.</div>`;
+output.innerHTML = `<div>hi! im harry (aka adenine). run "help" to start. (this site works better on laptop)</div>`;
 updatePrompt();
