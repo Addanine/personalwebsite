@@ -46,7 +46,7 @@ const fileSystem = {
     type: 'directory',
     contents: {
       'polysim.txt': 'a project to simulate u.s. elections with detailed modeling and analysis',
-      'cont.txt': 'conceptual translation tool - working on making language learning more intuitive',
+      'cont.txt': 'conceptual translation tool - working on making language translation more intuitive with https://github.com/ababythwumps',
       'liveoak-portal.txt': 'during my tech internship at live oak, i built a portal for teachers and students to upload and send documents using next.js and aws'
     }
   },
@@ -88,9 +88,10 @@ const secretCommands = {
   'hormones': "check out 'cat endocrinology.txt' in the interests directory",
   't3': "type-safety all the way down! check out 'cat stack.txt' in the misc directory",
   'ping': "pong!",
-  'secret': "try these commands: neovim, aws, blood, hormones, t3, laufey, clairo, mitski, beabadoobee, bi.",
+  'secret': "try these commands: neovim, aws, blood, hormones, t3, repo and bi.",
   'sudo': 'nice try :)',
   'rm': 'come on',
+  'repo': 'check out the repository for this at https://github.com/Addanine/personalwebsite!',
   'rm -rf': '🚨 NOPE! 🚨',
   'draw': asciiArtMode,
   'snake': startSnakeGame,
@@ -335,6 +336,7 @@ available commands:
 - theme: change color scheme
 - photos: view photo collage
 - help: show this help
+- repo: get the repo link of how i made this!
 
 folders to explore:
 - skills: check out my programming knowledge
@@ -344,7 +346,7 @@ folders to explore:
 - misc: other cool stuff about me
 
 try commands like:
-sudo, rm -rf, vim, :wq, exit
+sudo, rm -rf, vim, secret
 
 wanna see how i made this? (it isnt very organized) 
 check out the source code on github at 
